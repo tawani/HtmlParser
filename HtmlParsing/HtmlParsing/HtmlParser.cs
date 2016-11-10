@@ -101,6 +101,8 @@
             //Do not parse script contents
             if (node.Name == "script" || node.Name == "title" || node.Name == "style")
                 node.ChildNodes.Add(new HtmlText(contents));
+            //else if (node.Name == "style")
+            //    node.ChildNodes.Add(HtmlStyle.Parse(contents));
             else
                 AddNodes(node, contents, true);
 

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HtmlElementExtensions.cs" />
     <Compile Include="HtmlNode.cs" />
     <Compile Include="HtmlParser.cs" />
     <Compile Include="HtmlSanitizer.cs" />

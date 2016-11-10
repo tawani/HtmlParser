@@ -1,5 +1,6 @@
 ﻿namespace WhichMan.Utilities.HtmlParsing
 {
+    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
@@ -55,6 +56,7 @@
             return string.Format("<?{0}>", base.ToString());
         }
     }
+
     public class HtmlElement : HtmlNode
     {
         private readonly Dictionary<string, HtmlAttribute> _attributes;
@@ -162,4 +164,6 @@
             return string.Format("{0}=\"{1}\"", Name, Value);
         }
     }
+
+   
 }
