@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WhichMan.HtmlParsing</id>
+    <version>$version$</version>
+    <title>HTML Parser</title>
+    <authors>Tawani Anyangwe</authors>
+    <owners>Tawani Anyangwe</owners>
+    <projectUrl>https://github.com/tawani/HtmlParser</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HTML Parsing and Sanitizing utility. Convert HTML to XHTML</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>HTML XHTML Parser Sanitize</tags>
+  </metadata>
+</package>
