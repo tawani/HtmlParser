@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Globalization;
 
-    public static class HtmlElementExtensions
+    public static class Extensions
     {
         public static HtmlElement FindNode(this HtmlElement element, string name)
         {

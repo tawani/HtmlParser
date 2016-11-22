@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A30C44F-FBDE-4097-8407-AB67771D19BE}</ProjectGuid>
+    <ProjectGuid>{4992E822-691F-4786-95F5-BFB7BF521ECB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WhichMan.Utilities.HtmlParsing</RootNamespace>
-    <AssemblyName>HtmlParsing</AssemblyName>
+    <RootNamespace>WhichMan.Utilities.HtmlConverters</RootNamespace>
+    <AssemblyName>HtmlToXslFo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,13 +29,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>utilities.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlParsing, Version=1.0.0.3, Culture=neutral, PublicKeyToken=a5b339a8d61231f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\WhichMan.HtmlParsing.1.0.0.3\lib\net452\HtmlParsing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
-    <Compile Include="HtmlNode.cs" />
-    <Compile Include="HtmlParser.cs" />
-    <Compile Include="HtmlSanitizer.cs" />
+    <Compile Include="HtmlToXslFo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="utilities.snk" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
