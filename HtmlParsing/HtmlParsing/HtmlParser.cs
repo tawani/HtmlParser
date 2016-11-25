@@ -46,10 +46,17 @@
                     text = "";
 
                     var fragment = html.Substring(start, stop - start);
-                    if (fragment.StartsWith("!--") && fragment.EndsWith("--"))
+                    if (fragment.StartsWith("!--"))
                     {
-                        parent.Add(new HtmlComment(fragment.Substring(3).Substring(0, fragment.Length - 5)));
-                        i = stop;
+                        var minus = 3;
+                        stop = html.IndexOf("-->", start + 3, StringComparison.Ordinal);
+                        if (stop == -1)
+                        {
+                            stop = html.Length;
+                            minus = 0;
+                        }
+                        parent.Add(new HtmlComment(html.Substring(start+3, stop - start - minus)));
+                        i = stop + minus;
                     }
                     else if (fragment.StartsWith("!"))
                     {

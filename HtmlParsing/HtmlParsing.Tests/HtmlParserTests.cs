@@ -130,7 +130,7 @@
         }
 
         [Test]
-        public void Can_parse_item_with_inner_list()
+        public void Can_parse_list_item_with_inner_list()
         {
             const string html = @"
 <ol>
@@ -148,9 +148,26 @@
             var doc = HtmlParser.Parse(html);
 
             Assert.AreEqual(1, doc.ChildNodes.Count);
+            Assert.IsNotNull(doc.ChildNodes[0] as HtmlElement);
             Assert.AreEqual(3, (doc.ChildNodes[0] as HtmlElement).ChildNodes.Count);
 
             //Assert.AreEqual(html, doc.ToString());
+        }
+
+        [Test]
+        public void Can_parse_html_with_comments()
+        {
+            const string html = @"
+<p>Paragraph 1</p>
+<!--<blockquote>
+        &#x02022; &#9900;
+    </blockquote>-->
+";
+            var doc = HtmlParser.Parse(html);
+
+            Assert.AreEqual(2, doc.ChildNodes.Count);
+            Assert.IsTrue(doc.ChildNodes[0] is HtmlElement);
+            Assert.IsTrue(doc.ChildNodes[1] is HtmlComment);
         }
     }
 }
