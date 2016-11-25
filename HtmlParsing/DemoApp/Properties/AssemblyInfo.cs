@@ -9,7 +9,7 @@ using System.Windows;
 // associated with an assembly.
 [assembly: AssemblyTitle("DemoApp")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("WhichMan, INC.")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DemoApp")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
