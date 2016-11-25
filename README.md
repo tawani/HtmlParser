@@ -14,3 +14,6 @@ var el = doc.FindDescendants("ol").First();
 var nodes = el.FindNodes("li").ToList();
 Assert.AreEqual(3, nodes.Count);
 </pre>
+
+##Demo App
+<img src="html sanitizer demo.png"/>
