@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlParsing", "HtmlParsing\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlParsing.Tests", "HtmlParsing.Tests\HtmlParsing.Tests.csproj", "{487006E1-99A4-4E20-8C6C-FB29067E86F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{9199FA90-E1AC-49DC-980E-598638200CFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{487006E1-99A4-4E20-8C6C-FB29067E86F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{487006E1-99A4-4E20-8C6C-FB29067E86F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{487006E1-99A4-4E20-8C6C-FB29067E86F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9199FA90-E1AC-49DC-980E-598638200CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9199FA90-E1AC-49DC-980E-598638200CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9199FA90-E1AC-49DC-980E-598638200CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9199FA90-E1AC-49DC-980E-598638200CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
