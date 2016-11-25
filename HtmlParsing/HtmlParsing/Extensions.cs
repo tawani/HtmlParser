@@ -39,11 +39,11 @@
 
                 if (el.Name == name)
                     yield return el;
-                else
-                    foreach (var child in el.FindDescendants(name))
-                    {
-                        yield return child;
-                    }
+
+                foreach (var child in el.FindDescendants(name))
+                {
+                    yield return child;
+                }
             }
         }
 

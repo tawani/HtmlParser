@@ -128,5 +128,29 @@
 
             System.IO.File.WriteAllText(@"C:\temp\tests\sample.htm", doc.ToString());
         }
+
+        [Test]
+        public void Can_parse_item_with_inner_list()
+        {
+            const string html = @"
+<ol>
+    <li>
+        Item 1
+        <ol>
+            <li>Item 1.1</li>
+            <li>Item 1.2</li>
+            <li>Item 1.3</li>
+        </ol>
+    </li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>";
+            var doc = HtmlParser.Parse(html);
+
+            Assert.AreEqual(1, doc.ChildNodes.Count);
+            Assert.AreEqual(3, (doc.ChildNodes[0] as HtmlElement).ChildNodes.Count);
+
+            //Assert.AreEqual(html, doc.ToString());
+        }
     }
 }

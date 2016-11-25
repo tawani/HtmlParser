@@ -140,7 +140,7 @@
                     }
                 }
 
-                ix = ix1 + tag1.Length;
+                ix = ix2 + tag1.Length;
             }
             return -1;
         }

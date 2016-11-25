@@ -67,6 +67,23 @@
             var doc = HtmlParser.Parse(ReadFile("test.html"));
             var nodes = doc.FindDescendants("meta").ToList();
             Assert.AreEqual(4, nodes.Count);
+
+            const string html = @"
+<ol>
+    <li>
+        Item 1
+        <ol>
+            <li>Item 1.1</li>
+            <li>Item 1.2</li>
+            <li>Item 1.3</li>
+        </ol>
+    </li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>";
+            doc = HtmlParser.Parse(html);
+            nodes = doc.FindDescendants("ol").ToList();
+            Assert.AreEqual(2, nodes.Count);
         }
 
         [Test]
