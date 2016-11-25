@@ -3,7 +3,7 @@ HTML Parsing and Sanitizing utility. Convert HTML to XHTML
 
 e.g. 
 <pre>
-const string input = "&lt;div style =   \"color:blue;\" align =right>The Game  of &lt;b >Which&lt;/b > &lt;/div>";
+const string input = "&lt;div style=\"color:blue;\" align =right>The Game  of &lt;b >Which&lt;/b > &lt;/div>";
 var output = HtmlParser.Tidy(input);
 Assert.AreEqual("&lt;div style=\"color:blue;\" align=\"right\">The Game  of &lt;b>Which&lt;/b>&lt;/div>", output);
 </pre>
